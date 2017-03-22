@@ -182,7 +182,7 @@ try:
 	# you can also set this to ldap.VERSION2 if you're using a v2 directory
 	# you should  set the next option to ldap.VERSION2 if you're using a v2 directory
 	l.protocol_version = ldap.VERSION3	
-        l.simple_bind_s('administrator@the-soos.lan', 'Tw14Me3!')
+        l.simple_bind_s('administrator@the-soos.lan', '**********')
 
 except ldap.LDAPError, e:
 	print e
@@ -244,7 +244,7 @@ try:
                        print "We need to update the yubikey in DB!!"                 
                  else:
                     print("We need to add a user to guacamole with the name:" + loginname)
-                    mysql_add_guacamole_usr(loginname,'bMw2oi4!', yubikey,'localhost','root','Tw14Me3!','guacamole_db')
+                    mysql_add_guacamole_usr(loginname,'********', yubikey,'localhost','root','*******','guacamole_db')
                     #username, password, yubikey, conn_host, conn_usr, conn_pwd, conn_db):
 
 
