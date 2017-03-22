@@ -233,11 +233,11 @@ try:
                  yubikey = entry[1]['pager'][0]
 
                  # Now we can check mysql for existence of username in tabel guacamole_db.guacamole_user
-                 result = mysql_check_user(loginname, 'localhost','root','Tw14Me3!','guacamole_db')
+                 result = mysql_check_user(loginname, 'localhost','root','*******','guacamole_db')
                  print result
                  if result == 1:
                     # Now we have a user that is present in DB, lets check the yubikey
-                    db_yubikey=mysql_get_yubikey(loginname, 'localhost','root','Tw14Me3!','guacamole_db')
+                    db_yubikey=mysql_get_yubikey(loginname, 'localhost','root','*******!','guacamole_db')
                     if db_yubikey == yubikey:
                        print "Correct yubikey (%s)present in DB!" % db_yubikey
                     else:
