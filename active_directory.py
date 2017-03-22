@@ -7,7 +7,7 @@ import ldap.modlist as modlist
 
 LDAP_SERVER = "ldap://lnxadc01.the-soos.lan"
 BIND_DN = "ldap_bind@the-soos.lan"
-BIND_PASS = "ne1l7EuCeR"
+BIND_PASS = "*****"
 USER_FILTER = "(&(objectClass=user)(objectCategory=person))"
 USER_BASE = "ou=Medewerkers,dc=the-soos,dc=lan"
 PAGE_SIZE = 10
