@@ -43,7 +43,7 @@ if check_password(hashed_password, old_pass):
     valid_until='2017-12-31'
     disabled=1
     expired=1
- # THIS IS IT -> SET @selt=UNHEX(SHA2(UUID(),256));update guacamole_user SET password_salt = @selt, password_hash = UNHEX(SHA2(CONCAT('geheim',HEX(@selt)), 256)) WHERE username='admtduis';
+ # THIS IS IT -> SET @selt=UNHEX(SHA2(UUID(),256));update guacamole_user SET password_salt = @selt, password_hash = UNHEX(SHA2(CONCAT('supergeheim',HEX(@selt)), 256)) WHERE username='xxx';
     sql="insert into guacamole_db set (username,password_salted,password_hash,yubikey,disabled,expired,valid_from,valid_until,timezone) VALUES ('bladiebla',x'" + "UNHEX(" + salt.upper() + ")" + "',x'" + "UNHEX(" + hashed_password.upper() +")" + "','ccccccdddcin'," + str(disabled) + "," + str(expired) + "," + valid_from + "," + valid_until + ")"
     print(sql)
 
